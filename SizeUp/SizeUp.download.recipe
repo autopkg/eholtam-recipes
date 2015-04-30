@@ -5,7 +5,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.poundbangbash.recipes.irradiatedsoftware.sizeup.download</string>
+        <string>com.github.poundbangbash.eholtam-recipes.irradiatedsoftware.sizeup.download</string>
         <key>NAME</key>
         <string>SizeUp</string>
         <key>DOWNLOAD_URL</key>
