@@ -7,7 +7,7 @@
         <key>IDENTIFIER</key>
         <string>com.github.poundbangbash.eholtam-recipes.elgato.thunderbolt2Dock.munki</string>
         <key>NAME</key>
-        <string>SizeUp</string>
+        <string>Elgato Thunderbolt 2 Dock Driver</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>drivers/elgato</string>
         <key>pkginfo</key>
