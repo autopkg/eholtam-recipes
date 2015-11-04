@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.PortfolioExpress.download</string>
+        <key>NAME</key>
+        <string>PortfolioExpress</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://www.extensis.com/support/product-support/portfolio-2016/</string>
+				<key>re_pattern</key>
+				<string>(?P&lt;url&gt;http://bin.extensis.com/Portfolio2016-Express-M-[0-9-]*\.zip)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
