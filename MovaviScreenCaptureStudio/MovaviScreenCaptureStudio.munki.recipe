@@ -43,7 +43,7 @@ then
     rmdir -p ${LAbadpath}
 fi</string>
             <key>unattended_install</key>
-            <true/>
+            <false/>
             <key>postuninstall_script</key>
             <string>#!/bin/bash
 /bin/rm /Library/LaunchAgents/com.movavi.screencapturestudio3.screencapture.startup.plist
