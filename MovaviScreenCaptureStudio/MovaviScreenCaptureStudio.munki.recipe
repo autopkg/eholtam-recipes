@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads Movavi Screen Capture Studio and imports into Munki. 
+    
+Postinstall script dynamically creates a LaunchAgent and incorrectly assumes it can install it in /Users/$USER/Library/LaunchAgents/
+Since munki installs this as root the directory /Users/root/Library/LaunchAgents/ is created and the LaunchAgent is loaded from there as root.
+
+This receipe includes a munki postinstall_script to unload the LaunchAgent, move the LaunchAgent to /Library/LaunchAgents/ and remove the directory structure of /Users/root.</string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.MovaviScreenCaptureStudio.munki</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MovaviScreenCaptureStudio</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/movavi</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing-movavi-screncapturestudio</string>
+            </array>
+            <key>description</key>
+            <string>Download this convenient screen recorder for Mac and capture anything you want: video guides, Skype calls, streaming video, and much more.</string>
+            <key>display_name</key>
+            <string>Movavi Screen Capture Studio</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>postinstall_script</key>
+            <string>#!/bin/bash
+LAfile="com.movavi.screencapturestudio3.screencapture.startup.plist"
+LAbadpath="/Users/root/Library/LaunchAgents/"
+
+if [ -f ${LAbadpath}${LAfile} ]
+then
+    launchctl unload -w ${LAbadpath}${LAfile}
+    mv ${LAbadpath}${LAfile} /Library/LaunchAgents/
+    chmod 644 /Library/LaunchAgents/${LAfile}
+    chown root:wheel /Library/LaunchAgents/${LAfile}
+    rmdir -p ${LAbadpath}
+fi</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>postuninstall_script</key>
+            <string>#!/bin/bash
+/bin/rm /Library/LaunchAgents/com.movavi.screencapturestudio3.screencapture.startup.plist
+</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.poundbangbash.eholtam-recipes.MovaviScreenCaptureStudio.download</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
