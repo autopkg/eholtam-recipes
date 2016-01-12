@@ -44,6 +44,10 @@ then
 fi</string>
             <key>unattended_install</key>
             <true/>
+            <key>uninstall_script</key>
+            <string>#!/bin/bash
+/usr/bin/rm /Library/LaunchAgents/com.movavi.screencapturestudio3.screencapture.startup.plist
+</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
