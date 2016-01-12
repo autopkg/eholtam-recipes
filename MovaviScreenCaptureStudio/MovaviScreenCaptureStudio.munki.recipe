@@ -21,7 +21,7 @@ This receipe includes a munki postinstall_script to unload the LaunchAgent, move
         <dict>
             <key>catalogs</key>
             <array>
-                <string>testing-movavi-screncapturestudio</string>
+                <string>testing-movavi-screencapturestudio</string>
             </array>
             <key>description</key>
             <string>Download this convenient screen recorder for Mac and capture anything you want: video guides, Skype calls, streaming video, and much more.</string>
