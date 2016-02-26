@@ -107,6 +107,10 @@
 				<string>%found_filename%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>additional_makepkginfo_options</key>
+				<array>
+					<string>--pkgvers=%version%</string>
+				</array>
 			</dict>
 		</dict>            
 	</array>
