@@ -40,15 +40,6 @@
     <string>com.github.poundbangbash.eholtam-recipes.ScratchPlay.download</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>FileFinder</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/AssimSetup*.pkg</string>
-			</dict>
-		</dict>
         <dict>
             <key>Processor</key>
             <string>FlatPkgUnpacker</string>
