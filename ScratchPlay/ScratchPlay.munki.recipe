@@ -89,21 +89,21 @@
                 </dict>
             </dict>
         </dict>
-		<dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%found_filename%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-				<key>additional_makepkginfo_options</key>
-				<array>
-					<string>--pkgvers=%version%</string>
-				</array>
-			</dict>
-		</dict>            
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%found_filename%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>additional_makepkginfo_options</key>
+                <array>
+                    <string>--pkgvers=%version%</string>
+                </array>
+            </dict>
+        </dict>            
 	</array>
 </dict>
 </plist>
