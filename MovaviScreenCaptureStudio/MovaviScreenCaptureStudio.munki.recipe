@@ -10,7 +10,7 @@ Since munki installs this as root the directory /Users/root/Library/LaunchAgents
 
 This receipe includes a munki postinstall_script to unload the LaunchAgent, move the LaunchAgent to /Library/LaunchAgents/ and remove the directory structure of /Users/root.</string>
     <key>Identifier</key>
-    <string>com.github.poundbangbash.eholtam-recipes.MovaviScreenCaptureStudio.munki</string>
+    <string>com.github.poundbangbash.eholtam-recipes.munki.MovaviScreenCaptureStudio</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -53,7 +53,7 @@ fi</string>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.poundbangbash.eholtam-recipes.MovaviScreenCaptureStudio.download</string>
+	<string>com.github.poundbangbash.eholtam-recipes.download.MovaviScreenCaptureStudio</string>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads Kindle Kid's Book Creator for help creating illustrated children's books.</string>
     <key>Identifier</key>
-    <string>com.github.poundbangbash.eholtam-recipes.KindleKidsBookCreator.download</string>
+    <string>com.github.poundbangbash.eholtam-recipes.download.KindleKidsBookCreator</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

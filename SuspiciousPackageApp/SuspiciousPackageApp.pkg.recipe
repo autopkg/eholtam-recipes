@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of the Suspicious Package application, and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.poundbangbash.eholtam-recipes.SuspiciousPackageApp.pkg</string>
+	<string>com.github.poundbangbash.eholtam-recipes.pkg.SuspiciousPackageApp</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.3.2</string>
 	<key>ParentRecipe</key>
-	<string>com.github.poundbangbash.eholtam-recipes.SuspiciousPackageApp.download</string>
+	<string>com.github.poundbangbash.eholtam-recipes.download.SuspiciousPackageApp</string>
     <key>Process</key>
     <array>
         <dict>

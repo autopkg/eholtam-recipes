@@ -5,7 +5,7 @@
 	<key>MinimumVersion</key>
 	<string>0.5.2</string>
 	<key>Identifier</key>
-	<string>com.github.poundbangbash.eholtam-recipes.ScratchPlay.munki</string>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.ScratchPlay</string>
 	<key>Description</key>
 	<string>The ultimate, professional playback and review tool for virtually all production and camera formats.</string>
 	<key>Input</key>
@@ -37,7 +37,7 @@
 		</dict>
 	</dict>
     <key>ParentRecipe</key>
-    <string>com.github.poundbangbash.eholtam-recipes.ScratchPlay.download</string>
+    <string>com.github.poundbangbash.eholtam-recipes.download.ScratchPlay</string>
 	<key>Process</key>
 	<array>
         <dict>
