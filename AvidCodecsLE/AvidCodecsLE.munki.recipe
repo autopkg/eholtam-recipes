@@ -34,6 +34,8 @@
 			<string>%NAME%</string>
 			<key>display_name</key>
 			<string>Avid Codecs LE</string>
+			<key>unattended_install</key>
+			<true/>
 		</dict>
 	</dict>
     <key>ParentRecipe</key>
