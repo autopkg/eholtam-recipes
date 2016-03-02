@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MinimumVersion</key>
+	<string>0.5.2</string>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.AvidCodecsLE</string>
+	<key>Description</key>
+	<string>Avid Codecs LE for QuickTime allow QuickTime movies using Avid codecs to be used on systems without Media Composer installed.</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AvidCodecsLE</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/avid</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing-avid-AvidCodecsLE</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>developer</key>
+			<string>Avid</string>
+			<key>minimum_os_version</key>
+			<string>10.7</string>
+			<key>description</key>
+			<string>Avid Codecs LE for QuickTime allow QuickTime movies using Avid codecs to be used on systems without Media Composer installed.</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>display_name</key>
+			<string>Avid Codecs LE</string>
+		</dict>
+	</dict>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.AvidCodecsLE</string>
+	<key>Process</key>
+	<array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+            <key>Arguments</key>
+            <dict>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/AvidCodecsLE.pkg</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>            
+	</array>
+</dict>
+</plist>

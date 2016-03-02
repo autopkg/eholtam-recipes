@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.download.AvidCodecsLE</string>
+        <key>NAME</key>
+        <string>AvidCodecsLE</string>
+        <key>USER_AGENT</key>
+        <string>Mozilla/5.0</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://avid.force.com/pkb/articles/en_US/Download/Avid-QuickTime-Codecs-LE</string>
+				<key>re_pattern</key>
+				<string>(http\:\/\/cdn.avid.com\/Codecs\/LE\/[0-9.]*\/CodecsLE_[0-9.]*_Mac\.pkg\.zip)</string>
+                <key>request_headers</key>
+                <dict>
+                        <key>user-agent</key>
+                        <string>%USER_AGENT%</string>
+                </dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+			    <key>url</key>
+			    <string>%match%</string>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/AvidCodecsLE.pkg</string>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Avid Technology Inc</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
