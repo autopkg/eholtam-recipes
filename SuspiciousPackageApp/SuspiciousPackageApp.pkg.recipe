@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of the Suspicious Package application, and imports into Munki.</string>
+	<string>Downloads the latest version of the Suspicious Package application and creates a pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.SuspiciousPackageApp</string>
 	<key>Input</key>
