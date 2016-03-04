@@ -14,10 +14,10 @@
 		<string>apps/mothersruin</string>
 		<key>pkginfo</key>
 		<dict>
-		    <key>catalogs</key>
-		    <array>
-		        <string>testing-mothersruin-suspiciouspackage</string>
-            </array>
+			<key>catalogs</key>
+			<array>
+				<string>testing-mothersruin-suspiciouspackage</string>
+			</array>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>display_name</key>

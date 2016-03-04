@@ -14,7 +14,7 @@
 		<string>http://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.3.1</string>
+	<string>0.5.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%PKG_URL%</string>				
+				<string>%PKG_URL%</string>
 			</dict>
 		</dict>
 		<dict>
@@ -33,12 +33,8 @@
 			<dict>
 				<key>input_path</key>
 				<string>%pathname%/Suspicious Package.app</string>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Application: Randy Saldinger (936EB786NH)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
+				<key>requirement</key>
+				<string>anchor apple generic and identifier "com.mothersruin.SuspiciousPackageApp" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "936EB786NH")</string>
 			</dict>
 		</dict>
 		<dict>
