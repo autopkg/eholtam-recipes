@@ -14,7 +14,7 @@
         <string>http://www.ambrosiasw.com/dl/snapzprox</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.5.1</string>
+    <string>0.6.0</string>
     <key>Process</key>
     <array>
         <dict>
@@ -26,6 +26,8 @@
                 <string>%DOWNLOAD_URL%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
+                <key>CHECK_FILESIZE_ONLY</key>
+                <true/>
             </dict>
         </dict>
         <dict>
