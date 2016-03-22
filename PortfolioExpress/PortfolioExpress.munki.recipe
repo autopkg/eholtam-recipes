@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.PortfolioExpress</string>
+	<key>Description</key>
+	<string>Downloads and imports Portfolio Express Client into munki.
+	
+	Since the .dmg from Extensis is a Read/Write DMG munki will not import it.
+	This recipe copies the app out and creates a read-only DMG to import into munki.
+	</string>
+    <key>Input</key>
+    <dict>
+		<key>NAME</key>
+		<string>PortfolioExpress</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/extensis</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing-extensis-portfolioexpress</string>
+            </array>
+            <key>description</key>
+            <string>A space saving and resizable palette, Portfolio Express brings your assets directly to your other applications. Drag and drop assets into professional applications such as Adobe InDesign and Microsoft Powerpoint. Search and preview assets in your collections with Portfolio Express to maximize creative output.</string>
+            <key>display_name</key>
+            <string>Portfolio Express</string>
+            <key>minimum_os_version</key>
+            <string>10.7.0</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.PortfolioExpress</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source_path</key>
+				<string>%found_filename%/Portfolio Express.app</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-makedmg/Portfolio Express.app</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>DmgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_root</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-makedmg</string>
+                <key>dmg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%dmg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+	</array>
+</dict>
+</plist>
