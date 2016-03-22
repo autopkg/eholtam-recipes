@@ -51,6 +51,8 @@
 				<string>%found_filename%/Portfolio Express.app</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-makedmg/Portfolio Express.app</string>
+				<key>overwrite</key>
+				<true/>
 			</dict>
 		</dict>
         <dict>

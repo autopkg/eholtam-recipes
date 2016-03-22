@@ -2,15 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Identifier</key>
-	<string>com.github.poundbangbash.eholtam-recipes.download.PortfolioExpress</string>
 	<key>Description</key>
 	<string>Downloads latest Extensis Portforlio Express</string>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.download.PortfolioExpress</string>
     <key>Input</key>
     <dict>
 		<key>NAME</key>
         <string>PortfolioExpress</string>
     </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -33,6 +35,15 @@
 				<string>%NAME%.zip</string>
 			</dict>
 		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>StopProcessingIf</string>
+            <key>Arguments</key>
+            <dict>
+                <key>predicate</key>
+                <string>download_changed == FALSE</string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>

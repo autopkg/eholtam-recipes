@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MinimumVersion</key>
+	<string>0.2.3</string>
 	<key>Identifier</key>
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.PortfolioExpress</string>
 	<key>Description</key>
@@ -38,6 +40,8 @@
 				<string>%found_filename%/Portfolio Express.app</string>
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/Portfolio Express.app</string>
+				<key>overwrite</key>
+				<true/>
 			</dict>
 		</dict>
         <dict>
