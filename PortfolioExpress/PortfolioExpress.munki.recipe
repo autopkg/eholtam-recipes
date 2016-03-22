@@ -22,8 +22,12 @@
             <array>
                 <string>testing-extensis-portfolioexpress</string>
             </array>
+            <key>category</key>
+            <string>Productivity</string>
             <key>description</key>
             <string>A space saving and resizable palette, Portfolio Express brings your assets directly to your other applications. Drag and drop assets into professional applications such as Adobe InDesign and Microsoft Powerpoint. Search and preview assets in your collections with Portfolio Express to maximize creative output.</string>
+            <key>developer</key>
+            <string>Extensis</string>
             <key>display_name</key>
             <string>Portfolio Express</string>
             <key>minimum_os_version</key>
