@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.munki.ps4remoteplay</string>
+        <key>NAME</key>
+        <string>PS4RemotePlay</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/sony/ps4remoteplay</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>development-sony-ps4remoteplay</string>
+            </array>
+            <key>description</key>
+            <string>With this application installed on your PC or Mac, you'll enjoy immersive PlayStation gaming while being connected remotely to your PS4 system.</string>
+            <key>display_name</key>
+            <string>PS4 Remote Play</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>minimum_os_version</key>
+            <string>10.10.0</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.ps4remoteplay</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>unattended_install</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
