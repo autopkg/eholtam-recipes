@@ -33,6 +33,10 @@
                 </dict>
             </dict>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -48,10 +52,6 @@
 				</array>
 			</dict>
 		</dict>
-       <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
     </array>
 </dict>
 </plist>
