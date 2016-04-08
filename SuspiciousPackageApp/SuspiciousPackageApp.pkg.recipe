@@ -49,6 +49,8 @@
                 <string>%pathname%/%app_name%</string>
                 <key>destination_path</key>
                 <string>%pkgroot%/Applications/%app_name%</string>
+				<key>overwrite</key>
+				<true/>
             </dict>
         </dict>
         <dict>
