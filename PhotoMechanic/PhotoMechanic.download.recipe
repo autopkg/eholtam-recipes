@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the Photo Mechanic application.</string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.photomechanic</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>PhotoMechanic</string>
+        <key>DOWNLOAD_URL</key>
+        <string>http://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac</string>
+        <key>USER_AGENT</key>
+        <string>Mozilla/9.0</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+ 			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac</string>
+				<key>re_pattern</key>
+				<string>(PhotoMechanic[A-Z0-9]*\.dmg)</string>
+                <key>request_headers</key>
+                <dict>
+                        <key>user-agent</key>
+                        <string>%USER_AGENT%</string>
+                </dict>
+			</dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.camerabits.com/download/%match%</string>
+                <key>request_headers</key>
+                <dict>
+                        <key>user-agent</key>
+                        <string>%USER_AGENT%</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Photo Mechanic 5.app</string>
+                <key>requirement</key>
+                <string>anchor apple generic and identifier "com.camerabits.PhotoMechanic" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "628DA53678")</string>
+			</dict>
+		</dict>
+    </array>
+</dict>
+</plist>

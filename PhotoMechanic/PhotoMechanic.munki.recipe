@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.munki.photomechanic</string>
+        <key>NAME</key>
+        <string>PhotoMechanic</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/camerabits</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>development-camerabits-photomechanic</string>
+            </array>
+            <key>description</key>
+            <string>Photo Mechanic is a standalone image browser and workflow accelerator that lets you view your digital photos with convenience and speed.</string>
+            <key>display_name</key>
+            <string>Photo Mechanic</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>minimum_os_version</key>
+            <string>10.6.8</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.photomechanic</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>munkiimport_appname</key>
+                <string>Photo Mechanic 5.app</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>unattended_install</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
