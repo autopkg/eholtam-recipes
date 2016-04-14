@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Description</key>
+    <string>Downloads the Photo Mechanic application and imports into munki.</string>
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
@@ -39,8 +41,6 @@
             <dict>
                 <key>pkg_path</key>
                 <string>%pathname%</string>
-                <key>munkiimport_appname</key>
-                <string>Photo Mechanic 5.app</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
                 <key>unattended_install</key>
