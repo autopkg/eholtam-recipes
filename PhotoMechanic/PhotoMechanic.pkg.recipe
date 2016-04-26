@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Packages the latest Photo Mechanic application.</string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.pkg.photomechanic</string>
+    <key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PhotoMechanic</string>
+		<key>MAJOR_VERSION</key>
+		<string>5</string>
+	</dict>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.photomechanic</string>
+	<key>Process</key>
+	<array>
+        <dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source_path</key>
+				<string>%pathname%/Photo Mechanic %MAJOR_VERSION%.app</string>
+				<key>destination_path</key>
+				<string>%pkgroot%/Applications/Photo Mechanic %MAJOR_VERSION%.app</string>
+				<key>overwrite</key>
+				<true/>
+			</dict>
+		</dict>
+         <dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%pathname%/Photo Mechanic %MAJOR_VERSION%.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleShortVersionString</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgname</key>
+                <string>%NAME%-%version%.%build%</string>
+                <key>pkg_request</key>
+                <dict>
+                    <key>pkgroot</key>
+                    <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                    <key>version</key>
+                    <string>%version%.%build%</string>
+                    <key>pkgtype</key>
+                    <string>flat</string>
+                    <key>id</key>
+                    <string>com.github.autopkg.camerabits.photomechanic.pkg</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
+                    <key>chown</key>
+                    <array>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
