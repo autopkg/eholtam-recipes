@@ -67,7 +67,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-dmg/%NAME%[0-9.]*.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-dmg/Portfolio*.dmg</string>
 			</dict>
 		</dict>
 		<dict>
