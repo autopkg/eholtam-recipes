@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of the 360Fly Director application and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.360FlyDirector</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKINAME</key>
+		<string>360FlyDirector</string>
+		<key>repo_subdirectory</key>
+		<string>apps/360Fly</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing-360fly-director</string>
+			</array>
+			<key>name</key>
+			<string>%MUNKINAME%</string>
+			<key>display_name</key>
+			<string>%MUNKINAME%</string>
+			<key>description</key>
+			<string>Miss nothing, share everything. The 360fly apps make capturing, editing and sharing 360° video fun, easy and intuitive. They give you the power to share your best clips with family and friends across social media, directly from your device, with just the push of a button.</string>
+			<key>minimum_os_version</key>
+			<string>10.8</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.5.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.poundbangbash.eholtam-recipes.download.360FlyDirector</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
