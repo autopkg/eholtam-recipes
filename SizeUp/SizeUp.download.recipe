@@ -9,7 +9,7 @@
         <key>NAME</key>
         <string>SizeUp</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.irradiatedsoftware.com/download/SizeUp.zip</string>
+        <string>https://www.irradiatedsoftware.com/download/SizeUp.zip</string>
         <key>USER_AGENT</key>
         <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</string>
     </dict>
@@ -53,12 +53,8 @@
 			<dict>
 				<key>input_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/SizeUp.app</string>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Application: Irradiated Software, LLC</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
+				<key>requirement</key>
+				<string>identifier "com.irradiatedsoftware.SizeUp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = GVZ7RF955D</string>
 			</dict>
 		</dict>
        <dict>

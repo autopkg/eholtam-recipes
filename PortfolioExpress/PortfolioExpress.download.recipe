@@ -21,9 +21,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://www.extensis.com/support/product-support/portfolio-2016/</string>
+				<string>https://www.extensis.com/support/product-support/portfolio-2016/</string>
 				<key>re_pattern</key>
-				<string>(?P&lt;url&gt;http://bin.extensis.com/Portfolio2016-Express-M-[0-9-]*\.zip)</string>
+				<string>http://(?P&lt;domain&gt;bin.extensis.com/Portfolio2016-Express-M-[0-9-]*\.zip)</string>
 			</dict>
 		</dict>
 		<dict>
@@ -31,6 +31,8 @@
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
+			    <key>url</key>
+			    <string>https://%domain%</string>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
 			</dict>
