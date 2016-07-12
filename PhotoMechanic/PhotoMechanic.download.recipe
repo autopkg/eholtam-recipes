@@ -29,7 +29,7 @@
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 				<key>re_pattern</key>
-				<string>href="(?P&lt;url&gt;http:\/\/www\.camerabits\.com\/download\/PhotoMechanic5[A-Z](?P&lt;build&gt;[0-9]*)\.dmg)</string>
+				<string>(?P&lt;url&gt;http.*?PhotoMechanic\d[A-Z](?P&lt;build&gt;[0-9]*)\.dmg)</string>
                 <key>request_headers</key>
                 <dict>
                         <key>user-agent</key>

@@ -25,7 +25,7 @@
 				<key>url</key>
 				<string>%URL%</string>
 				<key>re_pattern</key>
-				<string>(https:\/\/360fly-media-assets\.s3\.amazonaws\.com\/director-app\/360fly-director-\d+\.dmg)</string>
+				<string>(http.*?360fly-director-\d+.dmg)</string>
 			</dict>
 		</dict>
 		<dict>
