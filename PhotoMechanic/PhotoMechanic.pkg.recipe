@@ -46,13 +46,13 @@
 		</dict>
          <dict>
             <key>Processor</key>
-            <string>Versioner</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-                <key>input_plist_path</key>
-                <string>%pathname%/Photo Mechanic %MAJOR_VERSION%.app/Contents/Info.plist</string>
-                <key>plist_version_key</key>
-                <string>CFBundleShortVersionString</string>
+                <key>url</key>
+                <string>file://%pkgroot%/Applications/Photo Mechanic %MAJOR_VERSION%.app/Contents/Info.plist</string>
+                <key>re_pattern</key>
+                <string>(?&lt;=CFBundleShortVersionString&lt;\/key&gt;\n\t&lt;string&gt;)(?P&lt;version&gt;[0-9.]*)</string>
             </dict>
         </dict>
         <dict>
