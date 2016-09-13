@@ -46,7 +46,7 @@
 				<string>%pathname%</string>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: Sony Computer Entertainment Inc.</string>
+					<string>Developer ID Installer: Sony Interactive Entertainment Inc. (8UT4NVUACP)</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
