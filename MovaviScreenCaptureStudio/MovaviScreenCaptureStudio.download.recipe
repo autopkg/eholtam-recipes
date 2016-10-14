@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>MovaviScreenCaptureStudio</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.movavi.com/download-screencapturemac</string>
+        <string>https://www.movavi.com/download-screencapturemac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.1</string>
