@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads Movavi Screen Capture Studio and imports into Munki.</string>
+    <string>Downloads Movavi Screen Capture Studio and imports into Munki.
+    
+NOTES:
+- This recipe depends on keeleysam's MunkiPkginfoReceiptsEditor.  Add the repo via:
+
+autopkg repo-add keeleysam-recipes
+
+</string>
     <key>Identifier</key>
     <string>com.github.poundbangbash.eholtam-recipes.munki.MovaviScreenCaptureStudio</string>
     <key>Input</key>
@@ -22,6 +29,8 @@
             <string>Download this convenient screen recorder for Mac and capture anything you want: video guides, Skype calls, streaming video, and much more.</string>
             <key>display_name</key>
             <string>Movavi Screen Capture Studio</string>
+            <key>minimum_os_version</key>
+            <string>10.10.0</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -44,6 +53,17 @@
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_ids_set_optional_true</key>
+				<array>
+					<string>com.movavi.pkg.soundgrabber.for10.9</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.keeleysam.recipes.GoogleTalkPlugin/MunkiPkginfoReceiptsEditor</string>
 		</dict>
 	</array>
 </dict>
