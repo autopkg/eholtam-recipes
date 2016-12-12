@@ -34,7 +34,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/Movavi Screen Capture Studio 3.pkg</string>
+				<string>%pathname%/Movavi Screen Capture Studio*.pkg</string>
 				<key>expected_authority_names</key>
 				<array>
 					<string>Developer ID Installer: GOLDEN SOFTWARE INC. (U8KD48QDBK)</string>
