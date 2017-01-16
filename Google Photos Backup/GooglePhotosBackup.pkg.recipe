@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads Google Photos Backup for backing up photos to Google and creates a pkg installer</string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.pkg.GooglePhotosBackup</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>GooglePhotosBackup</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.poundbangbash.eholtam-recipes.download.GooglePhotosBackup</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>	</array>
+</dict>
+</plist>
