@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>PhotoMechanic</string>
         <key>DOWNLOAD_URL</key>
-        <string>http://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac</string>
+        <string>https://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac</string>
         <key>USER_AGENT</key>
         <string>Mozilla/9.0</string>
         <key>MAJOR_VERSION</key>
