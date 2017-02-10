@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>360FlyDirector</string>
 		<key>URL</key>
-		<string>https://360fly.com/apps/</string>
+		<string>https://www.360fly.com/apps/</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.1</string>
