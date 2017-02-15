@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the CyberPower PowerPanel app to configure their UPS.
+    NOTE: This app is not code-signed by the developer
+    </string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.powerpanel</string>
+    <key>Input</key>
+    <dict>
+        <key>URL</key>
+        <string>https://www.cyberpowersystems.com/product/software/powerpanel-for-mac/</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>Process</key>
+    <array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%URL%</string>
+				<key>re_pattern</key>
+				<string>(http.*\.dmg)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%match%</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
