@@ -18,8 +18,11 @@
 		<dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
-			<key>bundleid</key>
-			<string>com.cyberpower.powerpanel</string>
+			<key>Arguments</key>
+			<dict>
+                <key>bundleid</key>
+                <string>com.cyberpower.powerpanel</string>
+            </dict>
 		</dict>
 	</array>
 </dict>
