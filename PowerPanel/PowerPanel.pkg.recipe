@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the CyberPower PowerPanel app to configure their UPS and creates a pkg installer</string>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.pkg.powerpanel</string>
+    <key>Input</key>
+    <dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.poundbangbash.eholtam-recipes.download.powerpanel</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+			<key>bundleid</key>
+			<string>com.cyberpower.powerpanel</string>
+		</dict>
+	</array>
+</dict>
+</plist>
