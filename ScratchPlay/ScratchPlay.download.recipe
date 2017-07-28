@@ -73,7 +73,7 @@
 				<string>%found_filename%</string>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: Assimilate B.V.</string>
+					<string>Developer ID Installer: Assimilate B.V. (EPGKK34NSD)</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
