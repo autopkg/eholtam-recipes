@@ -65,7 +65,7 @@
 		</dict>
         <dict>
             <key>Processor</key>
-            <string>com.github.autopkg.jessepeterson-recipes/Extensis/ModeChanger</string>
+            <string>com.github.autopkg.jessepeterson-recipes/ModeChanger</string>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
