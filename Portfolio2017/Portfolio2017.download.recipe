@@ -71,7 +71,7 @@
                 <key>filename</key>
                 <string>%found_filename%</string>
                 <key>mode</key>
-                <string>a+r</key>
+                <string>a+r</string>
             </dict>
         </dict>
     </array>
