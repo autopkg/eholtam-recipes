@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest Extensis Portforlio 2017</string>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.download.Portfolio2017</string>
+    <key>Input</key>
+    <dict>
+		<key>NAME</key>
+        <string>Portfolio2017</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.extensis.com/support/product-support/portfolio-2017/</string>
+				<key>re_pattern</key>
+				<string>http://(?P&lt;domain&gt;bin.extensis.com/Portfolio2017-M-[0-9-]*\.zip)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+			    <key>url</key>
+			    <string>https://%domain%</string>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-dmg</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-dmg/Portfolio*.dmg</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
