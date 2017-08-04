@@ -63,17 +63,6 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%-dmg/Portfolio*.dmg</string>
 			</dict>
 		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>com.github.autopkg.jessepeterson-recipes/ModeChanger</string>
-            <key>Arguments</key>
-            <dict>
-                <key>filename</key>
-                <string>%found_filename%</string>
-                <key>mode</key>
-                <string>a+r</string>
-            </dict>
-        </dict>
     </array>
 </dict>
 </plist>
