@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the Insta360Pro Stitcher application and imports into munki.</string>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.munki.insta360prostitcher</string>
+        <key>NAME</key>
+        <string>Insta360ProStitcher</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/insta360</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>development-insta360-stitcher</string>
+            </array>
+            <key>description</key>
+            <string>Use Insta360 Stitcher to quickly and easily stitch camera footage taken by Insta360 Pro.</string>
+            <key>display_name</key>
+            <string>Insta360 Pro Stitcher</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.insta360prostitcher</string>
+    <key>Process</key>
+    <array>
+       <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>unattended_install</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
