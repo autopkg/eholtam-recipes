@@ -51,6 +51,8 @@
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
+				<key>strict_verification</key>
+				<true />
 				<key>input_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/SizeUp.app</string>
 				<key>requirement</key>
