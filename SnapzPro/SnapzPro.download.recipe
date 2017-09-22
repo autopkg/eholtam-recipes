@@ -35,8 +35,6 @@
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>strict_verification</key>
-				<true />
 				<key>input_path</key>
 				<string>%pathname%/Snapz Pro X.pkg</string>
 				<key>expected_authority_names</key>
