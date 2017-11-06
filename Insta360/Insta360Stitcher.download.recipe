@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 				<key>re_pattern</key>
-				<string>(https://static.insta360.com/Insta360Stitcher/Insta360Stitcher_Mac[\S]+\.pkg)</string>
+				<string>(https://static.insta360.com/software/Stitcher/Mac/Insta360Stitcher_Mac[\S]+\.pkg)</string>
                 <key>request_headers</key>
                 <dict>
                         <key>user-agent</key>
