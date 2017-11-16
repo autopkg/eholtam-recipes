@@ -21,9 +21,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.extensis.com/support/product-support/portfolio-2017/</string>
+				<string>https://www.extensis.com/support/portfolio-2017-support/</string>
 				<key>re_pattern</key>
-				<string>http://(?P&lt;domain&gt;bin.extensis.com/Portfolio2017-Desktop-M-[0-9-]*\.zip)</string>
+				<string>(http.?://bin.extensis.com/Portfolio2017-Desktop-M-[0-9-]*\.zip)</string>
 			</dict>
 		</dict>
 		<dict>
@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 			    <key>url</key>
-			    <string>https://%domain%</string>
+			    <string>%match%</string>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
 			</dict>
@@ -69,7 +69,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>strict_verification</key>
-				<true />
+				<true/>
 				<key>input_path</key>
 				<string>%found_filename%/Portfolio Desktop.app</string>
 				<key>requirement</key>
