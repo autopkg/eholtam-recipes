@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>KindleKidsBookCreator</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://s3.amazonaws.com/kkbc/KPR/KindleKidsBookCreatorInstaller.dmg</string>
+        <string>http://kkbc.s3.amazonaws.com/KPR/KindleKidsBookCreatorInstaller.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.1</string>
