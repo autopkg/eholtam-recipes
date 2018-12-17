@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the iMazing HEIC Converter application and imports into munki.</string>
+    <key>Input</key>
+    <dict>
+        <key>IDENTIFIER</key>
+        <string>com.github.poundbangbash.eholtam-recipes.munki.imazing-heic-converter</string>
+        <key>NAME</key>
+        <string>imazing-heic-converter</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/imazing</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>development-imazing-imazingheicconverter</string>
+            </array>
+            <key>description</key>
+            <string>With iMazing HEIC Converter, you can adopt Apple's brand new format without worrying about compatibility with your older software. Simple, and truly free.</string>
+            <key>display_name</key>
+            <string>iMazing HEIC Converter</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>minimum_os_version</key>
+            <string>10.8.0</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.imazing-heic-converter</string>
+    <key>Process</key>
+    <array>
+       <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>unattended_install</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
