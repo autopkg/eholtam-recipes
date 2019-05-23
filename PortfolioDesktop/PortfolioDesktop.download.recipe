@@ -21,9 +21,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.extensis.com/support/portfolio-2017-support/</string>
+				<string>https://www.extensis.com/support/portfolio-3/</string>
 				<key>re_pattern</key>
-				<string>(http.?://bin.extensis.com/Portfolio2017-Desktop-M-[0-9-]*\.zip)</string>
+				<string>(http.?://bin.extensis.com/portfolio/Portfolio3-Desktop-M-[0-9-]*\.zip)</string>
 			</dict>
 		</dict>
 		<dict>
@@ -75,7 +75,7 @@
 				<key>requirement</key>
 				<string>identifier "com.electron.portfolio-desktop" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = J6MMHGD9D6</string>
 			</dict>
-		</dict>   
+		</dict>
     </array>
 </dict>
 </plist>
