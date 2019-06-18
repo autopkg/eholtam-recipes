@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Identifier</key>
+    <string>com.github.poundbangbash.eholtam-recipes.pkg.imazing-heic-converter</string>
     <key>Description</key>
     <string>Downloads the iMazing HEIC Converter application and creates a pkg.</string>
     <key>Input</key>
     <dict>
-        <key>IDENTIFIER</key>
-        <string>com.github.poundbangbash.eholtam-recipes.pkg.imazing-heic-converter</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.1</string>
