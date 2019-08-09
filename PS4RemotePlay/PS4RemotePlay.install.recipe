@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Installs the PS4 Remote Play application.</string>
     <key>Identifier</key>
-    <string>com.github.poundbangbash.eholtam-recipes.download.ps4remoteplay</string>
+    <string>com.github.poundbangbash.eholtam-recipes.install.ps4remoteplay</string>
     <key>Input</key>
     <dict>
     </dict>

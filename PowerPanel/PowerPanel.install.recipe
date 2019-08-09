@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Installs the CyberPower PowerPanel app.</string>
     <key>Identifier</key>
-    <string>com.github.poundbangbash.eholtam-recipes.download.powerpanel</string>
+    <string>com.github.poundbangbash.eholtam-recipes.install.powerpanel</string>
     <key>Input</key>
     <dict>
         <key>APPNAME</key>
