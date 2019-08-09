@@ -10,7 +10,7 @@
     <dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.5.1</string>
+    <string>1.0.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.poundbangbash.eholtam-recipes.download.powerpanel</string>
 	<key>Process</key>
