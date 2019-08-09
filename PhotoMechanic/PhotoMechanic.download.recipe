@@ -11,11 +11,11 @@
         <key>NAME</key>
         <string>PhotoMechanic</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac</string>
+        <string>https://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac&amp;version=PRO</string>
         <key>USER_AGENT</key>
         <string>Mozilla/9.0</string>
         <key>MAJOR_VERSION</key>
-        <string>5</string>
+        <string>6</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.1</string>
