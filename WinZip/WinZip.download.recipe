@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>SEARCHURL</key>
-		<string>http://winzip.com/mac/en/#download</string>
+		<string>https://winzip.com/mac/en/#download</string>
 		<key>NAME</key>
 		<string>WinZip</string>
 	</dict>
