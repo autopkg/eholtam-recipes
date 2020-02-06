@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>PhotoMechanic</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://www.camerabits.com/cgi-bin/download_pm.cgi?plat=mac&amp;version=PRO</string>
+        <string>https://www.camerabits.com/cgi-bin/download_pm.cgi</string>
         <key>USER_AGENT</key>
         <string>Mozilla/9.0</string>
         <key>MAJOR_VERSION</key>
@@ -30,6 +30,11 @@
 				<string>%DOWNLOAD_URL%</string>
 				<key>re_pattern</key>
 				<string>(?P&lt;url&gt;http.*?PhotoMechanic\d[A-Z](?P&lt;build&gt;[0-9]*)\.dmg)</string>
+				<key>curl_opts</key>
+				<array>
+				    <string>-d</string>
+				    <string>plat=mac&amp;version=PRO</string>
+				</array>
                 <key>request_headers</key>
                 <dict>
                         <key>user-agent</key>

@@ -10,8 +10,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>PhotoMechanic</string>
-		<key>MAJOR_VERSION</key>
-		<string>6</string>
 	</dict>
     <key>ParentRecipe</key>
     <string>com.github.poundbangbash.eholtam-recipes.download.photomechanic</string>

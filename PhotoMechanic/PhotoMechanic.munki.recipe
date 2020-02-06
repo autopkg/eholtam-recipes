@@ -12,8 +12,6 @@
         <string>PhotoMechanic</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/camerabits</string>
-        <key>MAJOR_VERSION</key>
-        <string>6</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
