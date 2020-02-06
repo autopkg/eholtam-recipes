@@ -47,6 +47,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+				<key>curl_opts</key>
+				<array/>
                 <key>request_headers</key>
                 <dict>
                         <key>user-agent</key>
