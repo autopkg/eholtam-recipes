@@ -10,20 +10,29 @@
     <dict>
         <key>NAME</key>
         <string>imazing-HEIC-converter</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://downloads.imazing.com/mac/iMazing-HEIC-Converter.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.1</string>
     <key>Process</key>
     <array>
         <dict>
+ 			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://imazing.com/heic/download/macos</string>
+				<key>re_pattern</key>
+				<string>(https:\/\/[\S]+\.dmg)</string>
+			</dict>
+        </dict>
+        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>%match%</string>
             </dict>
         </dict>
         <dict>
