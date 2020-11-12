@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.LastPass_Safari</string>
+	<key>Description</key>
+	<string>Downloads and imports LastPass for Safari into Munki.</string>
+    <key>Input</key>
+    <dict>
+		<key>NAME</key>
+		<string>LastPass_Safari</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/lastpass</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing-logmein-lastpassforsafari</string>
+            </array>
+            <key>category</key>
+            <string>Browser Plugins</string>
+            <key>description</key>
+            <string>Securely save passwords and automatically log into any site on the internet.</string>
+            <key>developer</key>
+            <string>LogMeIn</string>
+            <key>display_name</key>
+            <string>LastPass for Safari</string>
+            <key>minimum_os_version</key>
+            <string>10.12.0</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>ParentRecipe</key>
+    <string>com.github.poundbangbash.eholtam-recipes.download.LastPass_Safari</string>
+	<key>Process</key>
+	<array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+	</array>
+</dict>
+</plist>
