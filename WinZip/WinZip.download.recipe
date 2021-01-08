@@ -34,7 +34,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://download.winzip.com/%match%</string>
+				<string>https://download.winzip.com/%match%</string>
 			</dict>
 		</dict>
 		<dict>
