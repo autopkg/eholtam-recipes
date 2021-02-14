@@ -9,10 +9,7 @@
 	<key>Identifier</key>
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.PresentationFontEmbedder</string>
 	<key>Input</key>
-	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.presentationfontembedder.presentationfontembedder</string>
-	</dict>
+	<dict/>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
