@@ -7,10 +7,7 @@
 	<key>Identifier</key>
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.LastPass_Safari</string>
 	<key>Input</key>
-	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.autopkg.pkg.lastpassforsafari</string>
-	</dict>
+	<dict/>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>

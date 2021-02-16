@@ -10,8 +10,6 @@
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.iMindMap10</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.ThinkBuzan.iMindMap 10.iMindMap 10</string>
 		<key>NAME</key>
 		<string>iMindMap 10</string>
 	</dict>

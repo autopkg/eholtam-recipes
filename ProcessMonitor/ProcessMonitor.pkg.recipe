@@ -10,8 +10,6 @@
 	<string>com.github.poundbangbash.eholtam-recipes.pkg.ProcessMonitor</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.sqwarq.Process-Monitor</string>
 		<key>NAME</key>
 		<string>Process Monitor</string>
 	</dict>
