@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://avid.force.com/pkb/articles/en_US/Download/Avid-QuickTime-Codecs-LE</string>
+				<string>https://avidtech.my.salesforce-sites.com/pkb/articles/en_US/Download/Avid-QuickTime-Codecs-LE</string>
 				<key>re_pattern</key>
 				<string>(http\:\/\/cdn.avid.com\/Codecs\/LE\/[0-9.]*\/\w+\/CodecsLE_[0-9.]*_Mac.pkg.zip)</string>
                 <key>request_headers</key>
