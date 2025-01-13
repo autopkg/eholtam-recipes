@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Extensis Portforlio Desktop</string>
+	<string>Downloads latest Extensis Portfolio Desktop</string>
 	<key>Identifier</key>
 	<string>com.github.poundbangbash.eholtam-recipes.download.PortfolioDesktop</string>
     <key>Input</key>
