@@ -9,7 +9,7 @@
         <key>NAME</key>
         <string>elgatoThunderbolt2Dock</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://dl.elgato.com/thunderbolt/dockutility/Elgato_Thunderbolt_Dock_Software_11_110.pkg</string>
+        <string>https://edge.elgato.com/thunderbolt-dock/Elgato_Thunderbolt_Dock_Software_1.2.10.131_40.pkg</string>
         <key>USER_AGENT</key>
         <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</string>
     </dict>
@@ -42,7 +42,7 @@
 				<string>%pathname%</string>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: Elgato Systems GmbH</string>
+					<string>Developer ID Installer: Corsair Memory, Inc. (Y93VXCB8Q5)</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
